@@ -9,9 +9,9 @@ remainder = mod(scalefactor, 2);
 
 % Different cases when the remainder is 0 and 1.
 if remainder == 0
-    thumbnail=image((scalefactor/2: scalefactor: end), (scalefactor/2: scalefactor: end));
+    thumbnail=image((scalefactor/2: scalefactor: end-scalefactor), (scalefactor/2: scalefactor: end - scalefactor));
 else
-    thumbnail=image((((scalefactor+1)/2): scalefactor: end), (((scalefactor+1)/2): scalefactor: end)); 
+    thumbnail=image((((scalefactor+1)/2): scalefactor: end-scalefactor), (((scalefactor+1)/2): scalefactor: end - 1)); 
 end
     
 
